@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+
+message Employee{
+    int32 ID = 1;
+    string firstName = 2;
+    string lastName = 3;
+}
+
+message GetAllResponse{
+    repeated Employee employee = 1;
+}
+
+message GetAllRequest{
+
+}
+
+
+service EmployeeService {
+    rpc GetAll(GetAllRequest) returns (GetAllResponse);
+}
+
+
